@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UI Element Example</title>
+	<style>
+		body {
+			background-color: #F0F0F0;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+		
+		h1 {
+			font-size: 32px;
+			margin: 30px 0;
+		}
+		
+		#colorButton {
+			background-color: #007ACC;
+			border: none;
+			border-radius: 5px;
+			color: #FFFFFF;
+			cursor: pointer;
+			font-size: 20px;
+			padding: 10px 20px;
+			transition: background-color 0.3s ease;
+		}
+		
+		#colorButton:hover {
+			background-color: #005F9E;
+		}
+	</style>
+</head>
+<body>
+	<h1>Change the Background Color</h1>
+	<p>Click the button below to change the background color of the page:</p>
+	<button id="colorButton">Change Color</button>
+	
+	<script>
+		// Get the button element
+		var button = document.getElementById("colorButton");
+		
+		// Add a click event listener to the button
+		button.addEventListener("click", function() {
+			// Generate a random color
+			var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+			
+			// Set the background color of the body to the random color
+			document.body.style.backgroundColor = randomColor;
+		});
+	</script>
+</body>
+</html>
